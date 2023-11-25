@@ -40,7 +40,7 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         GITHUB_ACTOR: Hamidreza Ahmadi
-        EXCLUDED: ${{ secrets.EXCLUDED }}
+        EXCLUDED: ${{ env.EXCLUDED }}
         EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
         EXCLUDE_FORKED_REPOS: true
 
