@@ -531,10 +531,10 @@ async def main() -> None:
     Used mostly for testing; this module is not usually run standalone
     """
     access_token = os.getenv("ACCESS_TOKEN")
-    user = os.getenv("GITHUB_ACTOR")
-    if access_token is None or user is None:
+    user = 'Hamidreza Ahmadi'
+    if access_token is None:
         raise RuntimeError(
-            "ACCESS_TOKEN and GITHUB_ACTOR environment variables cannot be None!"
+            "ACCESS_TOKEN environment variables cannot be None!"
         )
     async with aiohttp.ClientSession() as session:
         s = Stats(user, access_token, session)
